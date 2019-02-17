@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>位置情報取得エラー情報</title>
+  </head>
+  <body>
+    <script>
+      navigator.getgeolocation.getCurrentPosition(SccCB,ErrCB,{enableHighAccuracy:ture});
+      function SccCB(position) {
+        alert("位置情報を取得しました");
+      }
+      function ErrCB(error) {
+        var STR = "エラーが発生しました\nエラー内容:" + error.message + "\nエラーコード:" + error.code;
+        alert(STR);
+      }
+    </script>
+  </body>
+</html>

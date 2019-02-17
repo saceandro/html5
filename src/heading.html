@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>方位</title>
+  </head>
+  <body>
+    <script>
+      var WP;
+      WP = navigator.geolocation.watchPosition(SccCB,ErrCB),{enableHighAccuracy:ture});
+      function SccCB(position) {
+        var head = position.coords.heading;
+        var STR = "現在の方位は" + head + "度です\n";
+        alert(STR);
+      }
+      function ErrCB(error) {
+        alert("位置情報を取得できませんでした");
+      }
+    </script>
+  </body>
+</html>

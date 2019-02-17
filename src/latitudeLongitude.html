@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>緯度経度精度</title>
+  </head>
+  <body>
+  <script>
+    navigator.geolocation.getCurrentPosition(SccCB,ErrCB);
+    
+    function SccCB(position) {
+      var lat = position.coords.latitude;
+      var lon = position.coords.longitude;
+      var acu = position.coords.accuracy;
+      var STR = "緯度は" + lat + "\n" + "経度は" + lon + "\n" + "誤差は" + acu + "m";
+      alert(STR);
+    }
+    
+    function ErrCB(error) {
+      alert("位置情報を取得できませんでした");
+    }
+  </script>
+  </body>
+</html>

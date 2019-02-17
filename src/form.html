@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ページタイトル</title>
+  </head>
+  <body>
+    <!--この入力欄はフォームの外にあります-->
+    <!-- form="〜"に注目 -->
+    <input type="text" name="TXT_1" placeholder="田中太郎">
+    <input type="datetime" form="FRM_1" name="DATETIME_1">
+
+    <p>ここに通常のテキストなど</p>
+    
+    <!--ここがフォームです-->
+    <form id="FRM_1" method="GET" action="foo.html">
+      <input type="submit" value="送信">
+    </form>
+  </body>
+</html>

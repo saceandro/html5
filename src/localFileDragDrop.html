@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      #RCV{width:400px; height:400px; background-color:red;}
+    </style>
+    <script>
+      function init() {
+        var RCV = document.getElementById("RCV");
+        RCV.addEventListener("dragover",DRO,true);
+        RCV.addEventListener("drop",DRP,true);
+      }
+      
+      function DRO(evt) {
+        evt.preventDefault();
+      }
+
+      function DRP(evt) {
+        evt.preventDefault();
+        alert("dropped");
+      }
+    </script>
+  </head>
+  <body onload="init()">
+  drop on red region
+  <div id="RCV"></div>
+  </body>
+</html>

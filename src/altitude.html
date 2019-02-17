@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>高度と誤差</title>
+  </head>
+  <body>
+    <script>
+      var WP;
+      WP = navigator.geolocation.watchPosition(SccCB,ErrCB,{enableHighAccuracy:true});
+      function SccCB(position) {
+        var alt = position.coords.altitude;
+        var alc = position.coords.altitudeAccuracy;
+        var STR = "高度は" + alt + "m\n" + "高度誤差は" + alc + "m";
+        alert(STR);
+      }
+      
+      function ErrCB(error) {
+        alert("位置情報を取得できませんでした");
+      }
+    </script>
+  </body>
+</html>

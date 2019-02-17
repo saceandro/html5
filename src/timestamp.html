@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>位置情報取得日時</title>
+  </head>
+  <body>
+    <script>
+      navigator.getgeolocation.getCurrentPosition(SccCB,ErrCB,{enableHighAccuracy:ture});
+      function SccCB(position) {
+        var tms = position.timestamp;
+        dd = new Date();
+        alert("取得日時は" + dd.toLocaleString(tms));
+      }
+      function ErrCB(error) {
+        alert("位置情報を取得できませんでした");
+      }
+    </script>
+  </body>
+</html>
